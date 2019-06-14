@@ -1,0 +1,11 @@
+C:\Users\Kira\Documents\k\code\mine\SingletonSamples\SingletonSamples\bin\Debug\netcoreapp2.1\SingletonSamples.deps.json
+C:\Users\Kira\Documents\k\code\mine\SingletonSamples\SingletonSamples\bin\Debug\netcoreapp2.1\SingletonSamples.runtimeconfig.json
+C:\Users\Kira\Documents\k\code\mine\SingletonSamples\SingletonSamples\bin\Debug\netcoreapp2.1\SingletonSamples.runtimeconfig.dev.json
+C:\Users\Kira\Documents\k\code\mine\SingletonSamples\SingletonSamples\bin\Debug\netcoreapp2.1\SingletonSamples.dll
+C:\Users\Kira\Documents\k\code\mine\SingletonSamples\SingletonSamples\bin\Debug\netcoreapp2.1\SingletonSamples.pdb
+C:\Users\Kira\Documents\k\code\mine\SingletonSamples\SingletonSamples\obj\Debug\netcoreapp2.1\SingletonSamples.csprojAssemblyReference.cache
+C:\Users\Kira\Documents\k\code\mine\SingletonSamples\SingletonSamples\obj\Debug\netcoreapp2.1\SingletonSamples.csproj.CoreCompileInputs.cache
+C:\Users\Kira\Documents\k\code\mine\SingletonSamples\SingletonSamples\obj\Debug\netcoreapp2.1\SingletonSamples.AssemblyInfoInputs.cache
+C:\Users\Kira\Documents\k\code\mine\SingletonSamples\SingletonSamples\obj\Debug\netcoreapp2.1\SingletonSamples.AssemblyInfo.cs
+C:\Users\Kira\Documents\k\code\mine\SingletonSamples\SingletonSamples\obj\Debug\netcoreapp2.1\SingletonSamples.dll
+C:\Users\Kira\Documents\k\code\mine\SingletonSamples\SingletonSamples\obj\Debug\netcoreapp2.1\SingletonSamples.pdb
