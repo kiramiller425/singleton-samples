@@ -1,4 +1,5 @@
-﻿
+﻿using System;
+
 namespace SingletonSamples
 {
     /// <summary>
@@ -22,11 +23,11 @@ namespace SingletonSamples
                 if(_instance == null)
                 {
                     _instance = new NonThreadSafeSingleton();
+                    Console.WriteLine("   Singleton Instance did not yet exist. Created one now.");
                 }
                 else
                 {
-                    // this is just to demonstrate
-                    throw new System.Exception("Instance already exists.");
+                    Console.WriteLine("   Singleton Instance already exists.");
                 }
 
                 return _instance;
