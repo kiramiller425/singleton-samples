@@ -21,7 +21,11 @@ namespace SingletonSamples
 
             SimpleLockThreadSafeSingletonExample();
             Thread.Sleep(delayBetweenExamples);
-            
+
+            DoubleCheckLockingSingletonExample();
+            Thread.Sleep(delayBetweenExamples);
+
+
             Console.WriteLine("Completed Samples. Goodbye!");
             var dummyVariable = Console.ReadLine();
         }
@@ -88,5 +92,36 @@ namespace SingletonSamples
 
         #endregion
 
+        #region DoubleCheckLockingSingleton
+
+        public static DoubleCheckLockingSingleton doubleCheckLockingSingleton;
+
+        public static void DoubleCheckLockingSingletonExample()
+        {
+            try
+            {
+                // There should only be 1 instance created:
+                ThreadPool.QueueUserWorkItem(SetupDoubleCheckLockingSingleton);
+                ThreadPool.QueueUserWorkItem(SetupDoubleCheckLockingSingleton);
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine("It should not get here. " + exception.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Completed example of DoubleCheckLockingSingleton.");
+            }
+        }
+
+        public static void SetupDoubleCheckLockingSingleton(Object stateInfo)
+        {
+            doubleCheckLockingSingleton = DoubleCheckLockingSingleton.Instance;
+            doubleCheckLockingSingleton = DoubleCheckLockingSingleton.Instance;
+            doubleCheckLockingSingleton = DoubleCheckLockingSingleton.Instance;
+        }
+
+        #endregion
+        
     }
 }

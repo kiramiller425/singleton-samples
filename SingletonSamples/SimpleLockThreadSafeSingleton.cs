@@ -5,7 +5,7 @@ namespace SingletonSamples
     /// <summary>
     /// This one is thread-safe, with a simple lock. This is not the best performance, though.
     /// </summary>
-    public class SimpleLockThreadSafeSingleton
+    public sealed class SimpleLockThreadSafeSingleton
     {
         private static SimpleLockThreadSafeSingleton _instance = null;
         private static readonly object _padlock = new object();
