@@ -28,6 +28,9 @@ namespace SingletonSamples
             LockLessThreadSafeSingletonExample();
             Thread.Sleep(delayBetweenExamples);
 
+            FullLazySingletonExample();
+            Thread.Sleep(delayBetweenExamples);
+
             Console.WriteLine("Completed Samples. Goodbye!");
             var dummyVariable = Console.ReadLine();
         }
@@ -152,6 +155,37 @@ namespace SingletonSamples
             lockLessThreadSafeSingleton = LockLessThreadSafeSingleton.Instance;
             lockLessThreadSafeSingleton = LockLessThreadSafeSingleton.Instance;
             lockLessThreadSafeSingleton = LockLessThreadSafeSingleton.Instance;
+        }
+
+        #endregion
+
+        #region FullLazySingleton
+
+        public static FullLazySingleton fullLazySingleton;
+
+        public static void FullLazySingletonExample()
+        {
+            try
+            {
+                // There should only be 1 instance created:
+                ThreadPool.QueueUserWorkItem(SetupFullLazySingleton);
+                ThreadPool.QueueUserWorkItem(SetupFullLazySingleton);
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine("It should not get here. " + exception.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Completed example of FullLazySingleton.");
+            }
+        }
+
+        public static void SetupFullLazySingleton(Object stateInfo)
+        {
+            fullLazySingleton = FullLazySingleton.Instance;
+            fullLazySingleton = FullLazySingleton.Instance;
+            fullLazySingleton = FullLazySingleton.Instance;
         }
 
         #endregion
